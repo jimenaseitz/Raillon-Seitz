@@ -2,8 +2,8 @@
 body {
     font-family: 'Raleway';
     font-style: normal;
-    background-color: hsl(0, 0%, 2%);
-    padding: 5px 0px 0px 0px;
+    background-color: black;
+    padding: 20px 0px 0px 0px;
     margin: 0;
 }
 .header{
@@ -11,7 +11,7 @@ body {
     top:0;
     left: 0;
     background-color: #fafcfd;
-    height: 80 px;
+    height: 60 px;
     width: 100%;
   
 }
@@ -46,12 +46,7 @@ body {
     
 }
 
-.carrucel{
-    background-color: #fafcfd;
-    height: 400px;
-    padding: 10px 40px 0px ;
-    margin-top: 10px;
-}
+
 
 .intro{
     background-color: black;
@@ -91,7 +86,8 @@ body {
  padding: 45px 0px;
 
 }
-.piedepagina .grupo-1 .box h2{
+.piedepagina .grupo-1 .box h2,a{
+    text-decoration: none;
 color: black;
 margin-bottom: 45px;
  font-size: 20px;
@@ -129,6 +125,10 @@ margin-bottom: 45px;
 .piedepagina .grupo2 small{
     font-size: 15px ;
 }
+
+
+
+
 .carousel{
     max-width: 5000px;
     margin: 0 auto;
@@ -141,12 +141,12 @@ margin-bottom: 45px;
     
 }
 .retroceder ,.avanzar{
-    background-color: white;
+    background-color: black;
     border: none;
     font-family:'Raleway';
 }
 .retroceder,.avanzar, button{
-    color: black;
+    color: white;
 }
 .controles,button {
     color: #000;
@@ -158,4 +158,117 @@ margin-bottom: 45px;
 
 .controles,button:hover{
         color: gray;
+    }
+
+    
+
+    
+    .DivForm{
+        font-family:'Raleway';
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .DivFormulario{
+        font-family: 'Raleway';
+        border-radius: 10px;
+        height: 500px;
+        width: 200px;
+        padding: 10px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .DivFormulario, .DivForm, h3 label{
+        font-weight: bold;
+        font-size: 20px;
+        color:white;
+    }
+    .DivFormulario input{
+        font-family: 'Raleway';
+    }
+    textarea{
+        width: 175px;
+        height: 80px;
+        font-family:'Raleway';
+     }
+     .formdiv2 li{ 
+        font-family: 'Raleway';
+            color:white;
+            font-size: 30px;
+            list-style: none;
+     }
+     .formdiv2 h2{
+        font-family:'Raleway';
+        color:white;
+        font-size: 30px;
+        list-style: none;
+     }
+     div.formdiv2{
+        text-align: center;
+     }
+
+
+
+     .conteiner{
+        width: 100%;
+        display: flex;
+        max-width: 1300px;
+    }
+
+
+
+
+    .card{
+        font-family:'Raleway';
+        width: 100%;
+        margin: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: whitesmoke;
+        box-shadow: 0px  1px 10px  rgb(0,0,0,0.2);
+        cursor: default;
+        transition: all 400ms ease;
+    
+    }
+    .card:hover{
+        box-shadow: 5px  5px 20px  rgb(0,0,0,0.4);
+        transform: translate(-2%);
+    }
+    
+    .card img{
+        width: 100%;
+        height: 410px;
+    
+    }
+    .card .contenido{
+    padding: 15px;
+    text-align: center;
+    
+    }
+    .card .contenido p{
+        line-height: 1.5;
+        color:black;
+    }
+    .card .contenido h3{
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .card .contenido a{
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+        color:#1abc9c;
+        border: 1px solid #1abc9c;
+        border-radius: 4px;
+        transition: all 400ms ease;
+    }
+    .card .contenido a:hover{
+    background: #1abc9c;
+    color: whitesmoke;
+    
     }

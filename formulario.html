@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ac2b499509.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="diseno-logo"><img  src="logo.jpg" alt="logo" class= "diseno-logo"></a>
+            <ul class="nav-menu">
+                <li class="elementos-barra">
+                    <a href="servicios.html" class="elementos-barra">SERVICIOS</a>
+                </li>
+                <li class="elementos-barra">
+                    <a href="servicios.html" class="elementos-barra">PRODUCTOS</a>
+                </li>
+                <li class="elementos-barra">
+                    <a href="formulario.html" class="elementos-barra">turnos</a>
+                </li>
+                <li class="elementos-barra">
+                    <a href="formulario.html" class="elementos-barra">CONTACTOS</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+<div class="DivForm">
+    <h3>Por turnos o consultas </h3>
+    <h3>Dejanos tu datos a continuación y nos comunicaremos con vos!!</h3>
+    
+
+</div>
+
+<div class="DivFormulario">
+    <form id="form" onsubmit="return validar()" autocomplete="on">
+        <label for="nombre">Nombre</label><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="apellido">Apellido</label><br>
+                <input type="text" id="apellido" name="apellido"><br><br>
+                <label for="telefono">Telefono</label><br>
+                <input type="text" id="telefono"><br><br>
+                <label for="mail">E-Mail</label><br>
+                <input type="text" id="mail" name="mail"><br><br>
+                <label for="comentario">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="40" rows="10"></textarea>
+                <input type="submit" value="Enviar">
+    </form>
+
+</div>
+<div class="formdiv2">
+    <div id="correcto"></div>
+    <div id = "incorrecto"></div>
+</div>
+
+<script>
+function validar(){
+    let nombre = document.getElementById("nombre");
+    let apellido = document.getElementById("apellido");
+    let telefono = document.getElementById("telefono");
+    let mail = document.getElementById("mail");
+    let comentario = document.getElementById("mensaje");
+    let correcto = document.getElementById("correcto");
+    let sinError = true;
+
+    let x = document.getElementById("incorrecto");
+    let emailNueva = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    let numeroNueva = /^[0-9]+$/;
+    x.innerHTML = "";
+
+    let mensajes;
+
+    if (nombre.value.trim() =="") {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique casilla nombre vacia.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }
+    if (apellido.value.trim() == "") {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique casilla apellido vacia.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }
+    if (telefono.value.trim() == "") {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique casilla telefono vacia.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }else if(!numeroNueva.test(telefono.value)){
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique solo se permiten numeros.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }
+    if (mail.value.trim() == "") {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique casilla E-mail vacia.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }else if (!emailNueva.test(mail.value)) {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique y escriba un mail correcto.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }
+    if (comentario.value.trim() == "") {
+    mensajes = document.createElement("li");
+    mensajes.innerHTML = "Verifique casilla de mensaje vacia.";
+    x.appendChild(mensajes);
+    sinError = false;
+    }
+
+    if (sinError) {
+    let m = document.createElement("h2");
+    m.innerHTML = "Mensaje enviado correctamente";
+    correcto.appendChild(m);
+    let n = document.createElement("li");
+    n.innerHTML = "nombre: "+nombre.value;
+    correcto.appendChild(n);
+    let a = document.createElement("li");
+    a.innerHTML = "apellido: "+apellido.value;
+    correcto.appendChild(a);
+    let t = document.createElement("li");
+    t.innerHTML = "telefono: "+telefono.value;
+    correcto.appendChild(t);
+    let c = document.createElement("li");
+    c.innerHTML = "mail: "+mail.value;
+    correcto.appendChild(c);
+    nombre.value = "";
+    apellido.value = "";
+    telefono.value = "";
+    mail.value = " ";
+    mensaje.value = "";
+    sinError = false;
+    }
+return sinError;
+
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <footer class="piedepagina">
+        <div class="grupo-1">
+            <div class="box">
+                <h2>SERVICIOS</h2>
+                    <a href="servicios.html"><P>CORTES</P></a>
+                    <a href="servicios.html"><P>LAVADO</P></a>
+                    <a href="servicios.html"><P>COLORACIÓN</P></a>
+                    
+            </div>
+            <div class="box">
+                <h2>UBICACIÓN </h2>
+                <p>HIPOLITO YRIGOYEN 1600</p>
+            </div>
+            <div class="box"><h2><a href="#">TURNOS</a></h2>
+            <p>SEITZ</p>
+            <p>Telefono: 3584169521</p>
+            <p>RAILLON</p>
+            <p>Telefono: 3584828798</p>
+        </div>
+            <div class="box">
+                <h2>NUESTRAS REDES</h2>
+                <div class="RedSocial">
+                    <a href="https://www.facebook.com/profile.php?id=100063654184719" target="_blank" class="fa fa-facebook"> </a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+        
+    
+        </div>
+         <div class="grupo2">
+           <small>&copy; 2022 <b>PeluqueriaRAILLON-SEITZ</b>- Todos los derechos Reservados.</small>
+           </div>
+    </footer>
+   
+</body>
+</html>
