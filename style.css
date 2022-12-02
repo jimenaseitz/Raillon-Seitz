@@ -11,7 +11,7 @@ body {
     top:0;
     left: 0;
     background-color: #fafcfd;
-    height: 60 px;
+    height: 80px;
     width: 100%;
   
 }
@@ -21,10 +21,10 @@ body {
     
 }
 .diseno-logo{
-    padding: 2.5px 25px;
+    padding: 0px 25px;
     display: flex;
-    width: 70px;
-    height: 70px;  
+    width: 80px;
+    height: 80px;  
 
 }
 .nav-menu{
