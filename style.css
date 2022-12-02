@@ -62,42 +62,70 @@ body {
     line-height: 40px;
 }
 
-.pie-pagina{
-    justify-content: space-between;
+.footer{
+    
+    
+    background-color: whitesmoke;
+    color: black;/color de letra/
+    font-family:'Raleway';
+    font-weight: bold;
+    width:2000px;
+    height:100px;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+}
+.piedepagina{
+    width: 100%;
     background-color: #fafcfd;
-    height: 300px;
-    bottom: 0px;
-    margin: 10 px;
-    width: 100%; 
-    padding: 20px 5px;
-    justify-content: space-between;
+    
 }
 
-.redes{
-   text-align: right;
-    justify-items: right; 
-    width: 20px;
-    height: 20px;
-    text-decoration: none;
-    text-transform: none;
-    list-style: none;
-    
-    display: flex;
-    
+.piedepagina .grupo-1{
+ width: 100%;
+ max-width: 1200px;
+ margin: auto;
+ display: grid;
+ grid-template-columns: repeat(4,3fr);
+ grid-gap: 50px;
+ padding: 45px 0px;
+
 }
-.bi-facebook{
-    width: 50px;
-    height: 50px;
-    color:black;
-    
+.piedepagina .grupo-1 .box h2{
+color: black;
+margin-bottom: 45px;
+ font-size: 20px;
+ font-family:'Raleway';
+
 }
-.bi-instagram{
-    width: 50px;
-    height: 50px;
-    color:black;
-}
-.bi-whatsapp{
-    width: 50px;
-    height: 50px;
+.piedepagina .grupo-1 .box p{
     color: black;
+    margin-bottom: 10px;
+     font-size: 20px;
+     font-family:'Raleway';
+    }
+
+.piedepagina .grupo-1 .RedSocial a{
+       display: inline-block;
+       text-decoration: none;
+       width: 65px;
+       height: 65px;
+       line-height: 65px;
+       color: black;
+       margin-right: 10px;
+       background-color:#fafcfd;
+       text-align: center;
+       transition:all 300ms ease;
+           }
+
+.piedepagina .grupo-1 .RedSocial a:hover{
+    color: black;
+}
+.piedepagina .grupo2{
+    background-color:#fafcfd;
+    text-align: center;
+    color: black;
+}
+.piedepagina .grupo2 small{
+    font-size: 15px ;
 }
