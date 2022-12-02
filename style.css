@@ -129,3 +129,33 @@ margin-bottom: 45px;
 .piedepagina .grupo2 small{
     font-size: 15px ;
 }
+.carousel{
+    max-width: 5000px;
+    margin: 0 auto;
+    display: flex;
+}
+#imagen{
+    width: 300%;
+    height: 600px;
+    background-size: cover;
+    
+}
+.retroceder ,.avanzar{
+    background-color: white;
+    border: none;
+    font-family:'Raleway';
+}
+.retroceder,.avanzar, button{
+    color: black;
+}
+.controles,button {
+    color: #000;
+    border: none;
+    font-family:'Raleway';
+    text-align: center;
+    background-position: center;
+    }
+
+.controles,button:hover{
+        color: gray;
+    }
